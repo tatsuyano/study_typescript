@@ -1,4 +1,15 @@
+const webpack = require('webpack');
+
 module.exports = {
+  plugins: [
+    new webpack.ProvidePlugin(
+      {
+        jQuery: "jquery",
+        $: "jquery",
+      }
+    ),
+  ],
+
   entry: './app/app.ts',
   output: {
     filename: './app/build/bundle.js'
